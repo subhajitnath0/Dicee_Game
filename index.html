@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dicee Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Click Your Drice</h1>
+
+        <div class="dice">
+            <p> </p>
+            <img class="img1" onclick={Click()} src="images/dice1.png">
+        </div>
+
+        <div class="dice">
+            <p>Robot</p>
+            <img class="img2" src="images/dice1.png">
+        </div>
+
+    </div>
+    <script>
+        let Name = prompt('Enter Your Name: ');
+        Name = Name[0].toLocaleUpperCase() + Name.toLowerCase().substring(1);
+        document.querySelector("p").innerHTML = Name;
+
+        function Click() {
+            var Player_1 = Math.floor((Math.random() * 6 + 1));
+            var Player_2 = Math.floor((Math.random() * 6 + 1));
+            (document.querySelectorAll("img")[0]).setAttribute("src", "images/dice" + Player_1 + ".png");
+            (document.querySelectorAll("img")[1]).setAttribute("src", "images/dice" + Player_2 + ".png");
+
+            if (Player_1 > Player_2) {
+                document.querySelector("h1").innerHTML = Name + " Wins!";
+            } else if (Player_1 < Player_2) {
+                document.querySelector("h1").innerHTML = "Robot Wins!";
+            } else {
+                document.querySelector("h1").innerHTML = "Draw!";
+            }
+        }
+    </script>
+
+
+</body>
+
+<footer>
+    <h2>Created by Subhajit Nath</h2>
+</footer>
+
+</html>
