@@ -1,2 +1,2 @@
 # Dicee_Game
-Dicee Game
+"Dicee Game" is a simple web-based game in which players roll two dice and try to match the numbers on the dice to win. This fun and easy-to-use application can be played on any device with a web browser, making it accessible to users everywhere. The interface is intuitive and user-friendly, making it suitable for players of all skill levels. Give "Dicee Game" a try and see if you can roll your way to victory!"
